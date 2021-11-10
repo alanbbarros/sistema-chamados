@@ -1,4 +1,9 @@
-# Getting Started with Create React App
+# Sistema de chamados
+
+Sistema de chamados com sistema de autenticação.
+Projeto utilizando HTML + CSS + React JS + Firebase.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

@@ -99,7 +99,7 @@ const New = () =>{
                 userUid: user.uid
             })
             .then(() =>{
-                toast.success('Chamado editado com sucesso!')
+                toast.success('Chamado editado com sucesso!!!')
                 setSelectedCustomer(0)
                 setComplemento('')
                 history.push('/dashboard')

@@ -32,7 +32,6 @@ function Dashboard() {
       })
       .catch(e =>{
         alert(e.message)
-        console.log(e);
       })
   
       setLoading(false)

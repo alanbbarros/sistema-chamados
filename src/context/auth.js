@@ -42,12 +42,10 @@ const AuthProvider = ({children}) =>{
 
             setUser(data)
             storageUser(data)
-            console.log(data);
             setLoadingAuth(false)
             toast.success('Bem vindo!')
         })
         .catch(e =>{
-            console.log(e);
             alert(e.message)
             setLoadingAuth(false)
             toast.error('Tente novamente!')
@@ -81,7 +79,6 @@ const AuthProvider = ({children}) =>{
             })
         })
         .catch(e =>{
-            console.log(e);
             alert(e.message)
             setLoadingAuth(false)
             toast.error('Tente novamente!')

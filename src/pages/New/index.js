@@ -30,7 +30,6 @@ const New = () =>{
             await firebase.firestore().collection('clients')
             .get()
             .then((snapshot) =>{
-                console.log(snapshot);
                 let lista = [];
 
                 snapshot.forEach(doc =>{
@@ -41,7 +40,6 @@ const New = () =>{
                 })
 
                 if(lista.length === 0){
-                    console.log('sem empresas');
                     setCustomers([{id: 1, nomeFantasia: ''}])
                     setLoadCustomers(false);
                     return
@@ -56,7 +54,6 @@ const New = () =>{
             })
             .catch(e =>{
                 alert(e.message)
-                console.log(e.message);
                 setCustomers([{id: 1, nomeFantasia: ''}])
             })
 
@@ -79,7 +76,6 @@ const New = () =>{
             setIdCustomer(true)
         })
         .catch(e =>{
-            console.log(e.message);
             setIdCustomer(false)
         })
     }
@@ -136,7 +132,6 @@ const New = () =>{
     }
 
     function handleCustomerChange(e){
-        console.log(customers[e.target.value]);   
         setSelectedCustomer(e.target.value)
     }
 

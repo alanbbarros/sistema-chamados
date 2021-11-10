@@ -26,7 +26,6 @@ const Profile = () =>{
         .ref(`images/${currentUid}/${imgAvatar.name}`)
         .put(imgAvatar)
         .then(async () =>{
-            console.log('deu certo');
             await firebase.storage().ref(`images/${currentUid}`)
             .child(imgAvatar.name).getDownloadURL()
             .then(async (url) =>{
@@ -60,7 +59,6 @@ const Profile = () =>{
             if(image.type === 'image/jpeg' || image.type === 'image/png'){
                 setImgAvatar(image)
                 setAvatarUrl(URL.createObjectURL(image))
-                console.log(image);
             }
             else{
                 alert('Formato inválido (Apenas png ou jpg)')
